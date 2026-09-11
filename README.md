@@ -4,7 +4,7 @@
 
 This project is an end-to-end data analytics project focused on **Ghana's shipping and port activity**.
 
-The project combines **SQL database development and analysis with Microsoft Power BI** to transform port activity data into structured analytical tables and interactive business intelligence.
+The project combines **SQL database development and Microsoft Power BI** to transform port activity data into structured analytical tables and an interactive business intelligence dashboard.
 
 The analysis focuses on:
 
@@ -16,7 +16,7 @@ The analysis focuses on:
 - Shipping trends over time
 - Comparison of import and export activity
 
-The project demonstrates an end-to-end workflow from raw data preparation and relational database design through SQL transformation and Power BI visualization.
+The project demonstrates an end-to-end analytics workflow, from raw data preparation and relational database design to SQL transformation, data modeling, visualization, and business insights.
 
 ---
 
@@ -62,7 +62,6 @@ Raw Ghana Shipping Data
           │
           ▼
  Interactive Dashboard
-
           │
           ▼
  Business Insights
@@ -81,19 +80,21 @@ The dataset includes measures for different vessel and cargo categories, includi
 - Total cargo
 
 The data also contains date-related fields that support analysis by:
+
 - Year
 - Month
 - Day
 - Date
-
-Data Architecture
+- Data Architecture
 
 The SQL component organizes the source data into separate analytical tables.
 
 Port Data
+
 The port_data table contains location and identification information for the ports.
 
 Key fields include:
+
 - portid
 - portname
 - country
@@ -102,9 +103,11 @@ Key fields include:
 The table uses portid as its primary key.
 
 Import Data
+
 The ghana_import_data table contains import-related activity and port-call measures.
 
 It includes:
+
 - Port identification
 - Date information
 - Container port calls
@@ -120,6 +123,7 @@ It includes:
 The ghana_export_data table contains corresponding export-related measures.
 
 It includes:
+
 - Port identification
 - Date information
 - Container port calls
@@ -135,6 +139,7 @@ It includes:
 The port_activity table provides a focused representation of port traffic and fleet mix.
 
 It contains:
+
 - Date
 - Year
 - Month
@@ -155,15 +160,17 @@ SQL Analysis
 The SQL component creates and populates the analytical database.
 
 The workflow includes:
+
 1. Database Selection
 USE GHANA_PORT;
-
 2. Table Creation
+
 The project creates separate tables for:
-Port information
-Import activity
-Export activity
-Port activity
+
+- Port information
+- Import activity
+- Export activity
+- Port activity
 3. Relational Structure
 
 The port_data table uses portid as its primary key.
@@ -184,9 +191,27 @@ Power BI Dashboard
 
 The SQL-processed data is used as the foundation for the Power BI analysis.
 
-Power BI provides an interactive environment for exploring the shipping data through visualizations and filters.
+The Power BI report provides an interactive environment for exploring Ghana's shipping and port activity through visualizations, KPIs, and filters.
 
-The dashboard focuses on port activity and shipping performance, allowing users to examine patterns across different ports, periods, and activity categories.
+The report contains three main analytical pages.
+
+1. Port Overview
+
+The Port Overview page provides a high-level view of port activity and vessel traffic.
+
+It is used to examine overall shipping activity and compare port performance across different periods and activity categories.
+
+2. Export Analysis
+
+The Export page focuses on export activity across Ghana's ports.
+
+It provides a detailed view of export performance and supports comparison across ports, cargo categories, and time periods.
+
+3. Import Analysis
+
+The Import page focuses on import activity across Ghana's ports.
+
+It allows import performance and cargo activity to be examined across ports and different time periods.
 
 Dashboard Analysis
 
@@ -199,6 +224,9 @@ Import performance
 Export performance
 Port-level comparisons
 Trends over time
+
+The three-page report provides a progression from overall port activity to more focused analysis of exports and imports.
+
 Key Metrics
 
 The project provides a framework for monitoring several important shipping indicators.
@@ -238,7 +266,7 @@ Port Activity
 
 Comparing total port calls across locations helps identify which ports handle the greatest levels of vessel traffic.
 
-Import vs Export Activity
+Import vs. Export Activity
 
 Comparing imports and exports provides an indication of the direction and composition of maritime trade activity.
 
@@ -327,7 +355,7 @@ CSV
 CSV files were used as source and processed data files during the project workflow.
 
 Project Structure
-```
+```text
 ghana-shipping-port-analytics/
 │
 ├── README.md
@@ -341,14 +369,15 @@ ghana-shipping-port-analytics/
 ├── powerbi/
 │   └── Ghana_Shipping_Port_Analytics.pbix
 │
-└── screenshots/
-    └── dashboard.png
+└── images/
+    ├── port_overview.png
+    ├── export.png
+    └── import.png
 ```
-
 SQL Database Structure
 
 The SQL workflow produces the following analytical structure:
-```
+```text
                  port_data
                 /         \
                /           \
@@ -405,11 +434,13 @@ Additional external datasets could also be incorporated to investigate relations
 
 Conclusion
 
-The Ghana Shipping & Port Analytics project demonstrates an end-to-end approach to transforming shipping data into actionable business intelligence.
+The Ghana Shipping & Port Analytics project demonstrates an end-to-end approach to transforming shipping data into business intelligence.
 
 SQL provides the foundation for organizing the raw shipping data into structured relational tables, while Power BI provides an interactive environment for analyzing port traffic, imports, exports, and cargo activity.
 
-By combining database design, data transformation, and visualization, the project demonstrates how different analytics tools can work together to support maritime and logistics analysis.
+The three-page Power BI report moves from an overall Port Overview to dedicated Export and Import analyses, allowing different aspects of Ghana's maritime activity to be examined from both operational and trade perspectives.
+
+By combining database design, data transformation, and visualization, the project demonstrates how SQL and Power BI can work together to support maritime and logistics analysis.
 
 Author
 
