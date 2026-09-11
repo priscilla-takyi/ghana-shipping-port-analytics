@@ -162,8 +162,10 @@ The SQL component creates and populates the analytical database.
 The workflow includes:
 
 1. Database Selection
+   
 USE GHANA_PORT;
-2. Table Creation
+
+3. Table Creation
 
 The project creates separate tables for:
 
