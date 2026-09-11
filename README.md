@@ -73,87 +73,80 @@ The project uses Ghana shipping and port activity data containing information on
 
 The dataset includes measures for different vessel and cargo categories, including:
 
-Container
-Dry bulk
-General cargo
-RoRo
-Tanker
-Total cargo
+- Container
+- Dry bulk
+- General cargo
+- RoRo
+- Tanker
+- Total cargo
 
 The data also contains date-related fields that support analysis by:
-
-Year
-Month
-Day
-Date
+- Year
+- Month
+- Day
+- Date
 
 Data Architecture
 
 The SQL component organizes the source data into separate analytical tables.
 
 Port Data
-
 The port_data table contains location and identification information for the ports.
 
 Key fields include:
-
-portid
-portname
-country
-ISO3
+- portid
+- portname
+- country
+- ISO3
 
 The table uses portid as its primary key.
 
 Import Data
-
 The ghana_import_data table contains import-related activity and port-call measures.
 
 It includes:
-
-Port identification
-Date information
-Container port calls
-Dry bulk port calls
-General cargo port calls
-RoRo port calls
-Tanker port calls
-Total cargo port calls
-Import measures by cargo type
-Total imports
-Export Data
+- Port identification
+- Date information
+- Container port calls
+- Dry bulk port calls
+- General cargo port calls
+- RoRo port calls
+- Tanker port calls
+- Total cargo port calls
+- Import measures by cargo type
+- Total imports
+- Export Data
 
 The ghana_export_data table contains corresponding export-related measures.
 
 It includes:
-
-Port identification
-Date information
-Container port calls
-Dry bulk port calls
-General cargo port calls
-RoRo port calls
-Tanker port calls
-Total cargo port calls
-Export measures by cargo type
-Total exports
-Port Activity
+- Port identification
+- Date information
+- Container port calls
+- Dry bulk port calls
+- General cargo port calls
+- RoRo port calls
+- Tanker port calls
+- Total cargo port calls
+- Export measures by cargo type
+- Total exports
+- Port Activity
 
 The port_activity table provides a focused representation of port traffic and fleet mix.
 
 It contains:
-
-Date
-Year
-Month
-Day
-Port ID
-Total port calls
-Container port calls
-Tanker port calls
-Dry bulk port calls
-General cargo port calls
-RoRo port calls
-Cargo port calls
+- Date
+- Year
+- Month
+- Day
+- Port ID
+- Total port calls
+- Container port calls
+- Tanker port calls
+- Dry bulk port calls
+- General cargo port calls
+- RoRo port calls
+- Cargo port calls
 
 This structure supports analysis of vessel traffic and fleet composition independently from import and export measures.
 
