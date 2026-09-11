@@ -161,32 +161,28 @@ The SQL component creates and populates the analytical database.
 
 The workflow includes:
 
-1. Database Selection
-   
+1. Database Selection 
 USE GHANA_PORT;
 
 3. Table Creation
-
 The project creates separate tables for:
 
 - Port information
 - Import activity
 - Export activity
 - Port activity
+  
 3. Relational Structure
-
 The port_data table uses portid as its primary key.
 
 The import and export tables reference the port table through foreign keys, creating a relational structure between port information and shipping activity.
 
 4. Data Population
-
 The analytical tables are populated from the source Ghana shipping dataset.
 
 The port table uses distinct port records, while the import and export tables retain the relevant daily shipping measures.
 
 5. Port Activity Table
-
 A dedicated port_activity table is created to support analysis of vessel traffic and fleet mix.
 
 Power BI Dashboard
